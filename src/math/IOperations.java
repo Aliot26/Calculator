@@ -10,5 +10,5 @@ public interface IOperations {
 
 	Double divide(double x, double y);
 
-	Double involute(double x);
+	Double divideWithReminder(double x, double y);
 }

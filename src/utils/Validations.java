@@ -3,7 +3,7 @@ package utils;
 public class Validations {
 	public Boolean isNumberCheck(String value) {
 		try {
-			Integer.parseInt(value);
+			Double.parseDouble(value);
 		} catch (NumberFormatException e) {
 			System.out.println("It's not a number!\n");
 			return false;
@@ -13,8 +13,9 @@ public class Validations {
 	}
 
 	public Boolean isMathOperationCheck(String operator) {
-		if (operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/")
-				|| operator.equals("^")) {
+		if (operator.equals("+") ||
+				operator.equals("-") || operator.equals("*") || operator.equals("/")
+				|| operator.equals("%")) {
 			return true;
 		}
 

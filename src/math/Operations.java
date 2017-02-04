@@ -27,8 +27,7 @@ public class Operations implements IOperations {
 	}
 
 	@Override
-	public Double involute(double x) {
-		return Math.pow(x, 2.0);
+	public Double divideWithReminder(double x, double y) {
+		return x % y;
 	}
-
 }

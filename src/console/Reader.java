@@ -16,7 +16,6 @@ public class Reader {
 			}
 		} while (value.isEmpty());
 
-		scanner.close();
 		return value;
 	}
 }
