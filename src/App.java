@@ -15,24 +15,32 @@ public class App {
 		String secondValue;
 		String operator;
 
-		do {
-			System.out.println("Print correct first number value : ");
-			firstValue = reader.readValue();
-		} while (!validations.isNumberCheck(firstValue));
+		for (;;) {
 
-		do {
-			System.out.println("Print correct mathematical operator : ");
-			operator = reader.readValue();
-		} while (!validations.isMathOperationCheck(operator));
+			do {
+				System.out.println("Print correct first number value : ");
+				firstValue = reader.readValue();
+			} while (!validations.isNumberCheck(firstValue));
 
-		do {
-			System.out.println("Print correct second number value : ");
-			secondValue = reader.readValue();
-		} while (!validations.isNumberCheck(secondValue));
+			do {
+				System.out.println("Print correct mathematical operator : ");
+				operator = reader.readValue();
+			} while (!validations.isMathOperationCheck(operator));
 
-		System.out.println("Expression : " + firstValue + " " + operator + " " + secondValue);
+			do {
+				System.out.println("Print correct second number value : ");
+				secondValue = reader.readValue();
+			} while (!validations.isNumberCheck(secondValue));
 
-		String result = String.valueOf(calc.calculateResult(firstValue, operator, secondValue));
-		System.out.println("Result value : " + result);
+			System.out.print("Expression : " + firstValue + " " + operator + " " + secondValue);
+
+			String result = String.valueOf(calc.calculateResult(firstValue, operator, secondValue));
+			System.out.println(" = " + result);
+			
+			System.out.println("Do you want to continue? (1 - yes, 0 - no) ");
+			if (reader.readValue().equals("0")) {
+				return;
+			}
+		}
 	}
 }

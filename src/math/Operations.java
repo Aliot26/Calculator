@@ -28,6 +28,10 @@ public class Operations implements IOperations {
 
 	@Override
 	public Double divideWithReminder(double x, double y) {
-		return x % y;
+		if (y != 0) {
+			return x % y;
+		} else {
+			throw new ArithmeticException("Division by zero!");
+		}
 	}
 }

@@ -13,9 +13,8 @@ public class Validations {
 	}
 
 	public Boolean isMathOperationCheck(String operator) {
-		if (operator.equals("+") ||
-				operator.equals("-") || operator.equals("*") || operator.equals("/")
-				|| operator.equals("%")) {
+		if (operator.equals("+") || operator.equals("-") || operator.equals("*") 
+				|| operator.equals("/") || operator.equals("%")) {
 			return true;
 		}
 
