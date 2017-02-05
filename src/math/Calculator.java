@@ -1,6 +1,16 @@
 package math;
 
+/**
+ * Class that performs expression calculation
+ */
 public class Calculator {
+	/**
+	 * Calculate mathematical expression
+	 * @param firstValue
+	 * @param operator
+	 * @param secondValue
+	 * @return Double result value
+	 */
 	public double calculateResult(String firstValue, String operator, String secondValue) {
 		IOperations operations = new Operations();
 
@@ -27,8 +37,6 @@ public class Calculator {
 		default:
 			result = 0.0;
 		}
-
 		return result;
-
 	}
 }

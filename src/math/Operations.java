@@ -1,5 +1,8 @@
 package math;
 
+/**
+ * Class with IOperations interface implementation
+ */
 public class Operations implements IOperations {
 
 	@Override

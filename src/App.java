@@ -1,10 +1,15 @@
+import java.io.IOException;
+
 import console.Reader;
 import console.Writer;
 import math.Calculator;
 import utils.Validations;
 
+/**
+ * Main class
+ */
 public class App {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Writer.printWelcomeMessage();
 
 		Validations validations = new Validations();
@@ -18,17 +23,17 @@ public class App {
 		for (;;) {
 
 			do {
-				System.out.println("Print correct first number value : ");
+				System.out.println("Print first number value : ");
 				firstValue = reader.readValue();
 			} while (!validations.isNumberCheck(firstValue));
 
 			do {
-				System.out.println("Print correct mathematical operator : ");
+				System.out.println("Print mathematical operator : ");
 				operator = reader.readValue();
 			} while (!validations.isMathOperationCheck(operator));
 
 			do {
-				System.out.println("Print correct second number value : ");
+				System.out.println("Print second number value : ");
 				secondValue = reader.readValue();
 			} while (!validations.isNumberCheck(secondValue));
 
@@ -41,6 +46,8 @@ public class App {
 			if (reader.readValue().equals("0")) {
 				return;
 			}
+			System.out.print("\033[H\033[2J");  
+		    System.out.flush();  
 		}
 	}
 }
