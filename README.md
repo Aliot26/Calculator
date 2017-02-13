@@ -5,7 +5,7 @@ This is the console calculator application to perform simple mathematical operat
 - Subtraction (-)
 - Multiplication (*)
 - Division (/)
-- Division with reminder (%)
+- Division with remainder (%)
 
 Also the validation of user input is implemented. There is class Validation.java with such methods, as :
 - public Boolean isNumberCheck(String value) - checks whether the entered character is a number
