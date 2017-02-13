@@ -30,7 +30,7 @@ public class Operations implements IOperations {
 	}
 
 	@Override
-	public Double divideWithReminder(double x, double y) {
+	public Double divideWithRemainder(double x, double y) {
 		if (y != 0) {
 			return x % y;
 		} else {

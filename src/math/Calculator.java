@@ -32,7 +32,7 @@ public class Calculator {
 			result = operations.divide(x, y);
 			break;
 		case "%":
-			result = operations.divideWithReminder(x, y);
+			result = operations.divideWithRemainder(x, y);
 			break;
 		default:
 			result = 0.0;

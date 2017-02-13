@@ -43,5 +43,5 @@ public interface IOperations {
 	 * @param y	Second value
 	 * @return Result value
 	 */
-	Double divideWithReminder(double x, double y);
+	Double divideWithRemainder(double x, double y);
 }
